@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>portfolio</title>
+    <link rel="stylesheet" href="{%static 'myapp/main.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <nav id = "navbar" class="flex s-around bg-color">
+
+    <div class="left-nav">
+        <h2 class="t-white">portfolio</h2>
+    </div>
+    <div class="right-nav">
+        <li><a href="#home"class="t-white roboto"> HOME<i class="fa-solid fa-house"></a></li>
+        <li><a href="#about"class="t-white roboto"> ABOUTUS<i class="fa-solid fa-"></a></li>
+        <li><a href="#skills"class="t-white roboto"> SKILLS<i class="fa-solid fa-code"></a></li>
+        <li><a href="#project"class="t-white roboto"> PROJECT<i class="fa-solid fa-project-diagram"></a></li>
+        <li><a href="#contact"class="t-white roboto"> CONTACT<i class="fa-solid fa-rocket"></a></li>
+    </div> 
+
+  </nav>
+  <section id="home" class="flex s-around sw-80 m-auto">
+    <div class="home-left flex itmes-center">
+        <div class="home-content">
+            <h6 class="popinss">Hi, i'm</h6>
+            <h1 class="t-white">pritha gupta</h1>
+            <h4 class="popinss">I'am currently pursuing btech in computer science</h4> 
+            <a href=""></a>   
+        </div>
+
+    </div>
+  </section>
+  <section id ="ABOUTUS">
+    <h1 class="t-white center my-2 t-white f-2">ABOUT <menu></menu></h1>
+    <div class="about-container flex s-around">
+      <div class="about-left flex s-center items-center"></div>
+    </div>
+    <div class="about-right flex">
+      <div class="about-content">
+        <h1 class="t-white m-b-1 popinss"></h1>
+         <p class="t-white popinss"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vitae dolores inventore obcaecati necessitatibus beatae? Accusamus voluptates, commodi laudantium sunt voluptas placeat quasi labore! Quam laboriosam cumque nisi dolor cupiditate.</p>
+        <a href="btn" id="hireme" href="">hire me</a>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <h1 class="t-center my-2 t-white f-2">skills</h1>
+    <div class="service-center flex s-around h-50">
+      <div class="skills-left flex s-center items-center"></div>
+
+      <div class="skills-right flex itmes-center">
+        <div class="skills-container">
+        <div class="java bar p-relative"><span class="bar-content left t-white">core jave</span>
+        <span class="bar-content right-skills t-white">90%</span> </div>
+
+        <div class="html bar p-relative"><span class="bar-content left t-white">HTML</span>
+        <span class="bar-content right-skills t-white">90%</span> </div>
+
+        <div class="css bar p-relative"><span class="bar-content left t-white">CSS</span>
+        <span class="bar-content right-skills t-white">80%</span> </div>
+
+        <div class="js bar p-relative"><span class="bar-content left t-white">javascripts</span>
+        <span class="bar-content right-skills t-white">90%</span> </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<section  id="project">
+  <h1 class="project-container my-2 t-white f-2">project</h1>
+  <div class="project-container flex s-center">
+    <div class="project-item flex f-col s-center">
+    <h1 class="t-white popiness">amozone clone</h1>
+    <p class="t-white popiness">Lorem ipsum dolor sit amet consectetur adipisicing elit. In delectus esse magni eligendi harum repellat tempora distinctio magnam error. Earum ratione eveniet quos? Enim delectus nesciunt iste tempore nisi error.</p>
+    <div class="button flex s-around">
+      <a href="" targets="_blank" class="btn mx-1 m-top">GitHub</a>
+    </div>
+    </div>
+
+
+
+    <div class="project-item flex f-col s-center">
+    <h1 class="t-white popiness">amozone clone</h1>
+    <p class="t-white popiness">Lorem ipsum dolor sit amet consectetur adipisicing elit. In delectus esse magni eligendi harum repellat tempora distinctio magnam error. Earum ratione eveniet quos? Enim delectus nesciunt iste tempore nisi error.</p>
+    <div class="button flex s-around">
+      <a href="" targets="_blank" class="btn mx-1 m-top">GitHub</a>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="m-b-1">
+  <h1 class="t-center my-2 t-white f-2"> contact me</h1>
+  <div class="contact-container flex s-around itmes-center">
+    <div class="form"id="contactform">
+      <form method="post">
+        {% csrf_token%}
+        <div class="name form-div">
+          <input type="text" name="name"id="name" class="popinss" placeholder="Enter your name">
+        </div>
+
+           <div class="email form-div">
+          <input type="email" name="email"id="" class="popinss" placeholder="enter your email">
+
+             <div class="phone form-div">
+          <input type="phone" name="number"id="" class="popinss" placeholder="Enter your phone" required>
+        </div>
+
+           <div class="textarea form-div">
+          <textarea name="contect" id="textarea" cols="30" row="10" class="popinss" placeholder="Enter your messages"></textarea>
+        </div>
+
+
+        <button type="submit" class="btn popinss" id="submit">send</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+ 
+</body>
+</html>
