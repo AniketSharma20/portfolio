@@ -24,6 +24,44 @@ body {
   color: var(--light);
   scroll-behavior: smooth;
 }
+.form-group {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.2rem 0.8rem 0.8rem;
+  background: #1e293b;
+  border: none;
+  border-radius: 6px;
+  color: var(--light);
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form label {
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: #1e293b;
+  padding: 0 0.3rem;
+}
+
+.contact-form input:focus + label,
+.contact-form textarea:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  left: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--primary);
+}
 
 /* Header */
 header {
@@ -216,74 +254,94 @@ footer {
       </ul>
     </nav>
   </header>
-
+  
+  <div id="home"></div>
   <main>
-    <section class="hero" id="home">
+    <section class="hero" style="margin-top: 8rem; margin-bottom: 8rem;">
+
       <div class="hero-text">
         <h2>Hi, I'm Aniket</h2>
         <div class="typewriter" id="typing"></div>
         <a href="#contact" class="btn">Hire Me</a>
-        <a href="{% static 'myapp/aniket.pdf' %}" class="btn"> Resume</a>
+        <a href="{% static 'myapp/resumeAniket.pdf' %}" class="btn"> Resume</a>
       </div>
-      <img src="{% static 'myapp/aniket1.jpg' %}" alt="Hero Image">
+      <img src="{% static 'myapp/Image/aniket1.jpg' %}" alt="Hero Image">
+      <!-- <img src="C:\Users\aniket\Desktop\django1\portfolio\myapp\static\aniket1.jpg" alt="Hero Image"> -->
     </section>
 
-    <section id="about">
+    <div id="about" style="margin-bottom: 20%;"></div>
+    <div>
+    <section id="" style=" margin-bottom: 8rem;">
       <h2 class="section-title">About Me</h2>
       <p style="text-align:center">Hi, I'm Aniket Sharma — a passionate and creative web developer with a strong focus on front-end design and user experience. I specialize in building responsive, interactive, and visually appealing websites using HTML, CSS, and JavaScript.
 
 With a keen eye for detail and a love for clean, elegant code, I aim to bring ideas to life in the browser. Whether it's crafting a personal portfolio, designing a dynamic landing page, or developing feature-rich web applications, I strive to deliver modern and user-friendly digital experiences..</p>
     </section>
+    </div>
+    <div id="skills" style="margin-bottom: 20%;"></div>
+    <section id="skills" style="margin-bottom: 8rem;">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="card">
+      <h3>HTML <span style="float:right;">65%</span></h3>
+      <div class="skill-bar"><div class="bar-fill" data-percent="65%"></div></div>
+    </div>
+    <div class="card">
+      <h3>CSS <span style="float:right;">70%</span></h3>
+      <div class="skill-bar"><div class="bar-fill" data-percent="70%"></div></div>
+    </div>
+    <div class="card">
+      <h3>JavaScript <span style="float:right;">50%</span></h3>
+      <div class="skill-bar"><div class="bar-fill" data-percent="50%"></div></div>
+    </div>
+    <div class="card">
+      <h3>Java <span style="float:right;">60%</span></h3>
+      <div class="skill-bar"><div class="bar-fill" data-percent="60%"></div></div>
+    </div>
+  </div>
+  <div id="projects"></div>
+</section>
 
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills">
-        <div class="card">
-          <h3>HTML</h3>
-          <div class="skill-bar"><div class="bar-fill" data-percent="65%"></div></div>
-        </div>
-        <div class="card">
-          <h3>CSS</h3>
-          <div class="skill-bar"><div class="bar-fill" data-percent="70%"></div></div>
-        </div>
-        <div class="card">
-          <h3>JavaScript</h3>
-          <div class="skill-bar"><div class="bar-fill" data-percent="50%"></div></div>
-        </div>
-        <div class="card">
-          <h3>Java</h3>
-          <div class="skill-bar"><div class="bar-fill" data-percent="60%"></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
+    <section id="projects" style="margin-top: 8rem; margin-bottom: 8rem;">
       <h2 class="section-title">Projects</h2>
       <div class="projects">
         <div class="card">
           <h3>Hotel Management System</h3>
-          <p>A Hotel Management System (HMS) is software or a digital tool designed to help manage the day-to-day operations of a hotel efficiently. It typically includes various modules that handle different aspects of hotel management.</p>
-          <a href="{% static 'myapp/resturant1.png' %}" class="btn">View photo</a>
+          <p>A Hotel Management System (HMS) is software or a digital tool designed to help manage the day-to-day operations of a hotel efficiently. It typically includes various modules that handle different aspects of hotel management.   </p>
+          <a href="{% static 'myapp/resturant1.png' %}" class="btn"> View photo </a>
         </div>
         <div class="card">
           <h3>Frontend Web Designing</h3>
-          <p>Frontend Web Designing is the process of creating the visual and interactive part of a website—the part users see and interact with in their browser. It includes layout, colors, fonts, buttons, menus, animations, and more.</p>
-          <a href="{% static 'myapp/frantend.png' %}" class="btn">View photo</a>
+          <p>Frontend Web Designing is the process of creating the visual and interactive part of a website—the part users see and interact with in their browser. It includes layout, colors, fonts, buttons, menus, animations, and more.   </p>
+          <a href="{% static 'myapp/frontend.png' %}" class="btn"> View photo </a>
         </div>
       </div>
+      <div id="contact"></div>
     </section>
+    <section id="contact" >
+  <h2 class="section-title">Get In Touch</h2>
+  <form method="post" class="contact-form">
+    {% csrf_token %}
+    <div class="form-group">
+      <input type="text" name="name" id="name" placeholder=" " required>
+      <label for="name">Your Name</label>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" id="email" placeholder=" " required>
+      <label for="email">Your Email</label>
+    </div>
+    <div class="form-group">
+      <input type="text" name="number" id="number" placeholder=" " required>
+      <label for="number">Phone Number</label>
+    </div>
+    <div class="form-group">
+      <textarea name="message" id="message" rows="5" placeholder=" " required></textarea>
+      <label for="message">Your Message</label>
+    </div>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
 
-    <section id="contact">
-      <h2 class="section-title">Contact Me</h2>
-      <form method="post" class="contact-form">
-        {% csrf_token %}
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="number" placeholder="Your Phone Number" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
   </main>
 
   <footer>
