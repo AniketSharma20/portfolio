@@ -311,28 +311,31 @@ nav {
 }
 
 .resume-button {
-  display: none;
+  display: block;
+}
+
+.resume-button .btn {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--glow-primary);
+  font-size: 0.85rem;
+}
+
+.resume-button .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 212, 170, 0.4);
 }
 
 @media (min-width: 768px) {
-  .resume-button {
-    display: block;
-  }
-  
   .resume-button .btn {
-    background: var(--accent-primary);
-    color: var(--bg-primary);
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: var(--glow-primary);
-  }
-  
-  .resume-button .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 212, 170, 0.4);
+    font-size: 1rem;
   }
 }
 
@@ -950,7 +953,11 @@ nav {
 
 .work-links {
   display: flex;
-  gap: 1rem;
+}
+
+.work-links .btn {
+  width: 100%;
+  justify-content: center;
 }
 
 .work-links a {
