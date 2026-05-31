@@ -870,7 +870,7 @@ nav {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--gap-md);
 }
 
@@ -878,7 +878,7 @@ nav {
   opacity: 0;
   transform: translateY(50px);
   position: relative;
-  height: 450px;
+  height: 100%;
   border-radius: 12px;
   overflow: hidden;
   background: var(--bg-card);
@@ -887,6 +887,8 @@ nav {
   cursor: pointer;
   /* Ensure proper contrast */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
 }
 
 .work-item:hover {
@@ -896,7 +898,8 @@ nav {
 }
 
 .work-item-image {
-  height: 60%;
+  height: 220px;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -912,8 +915,8 @@ nav {
 }
 
 .work-item-content {
-  padding: 1.5rem;
-  height: 45%;
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to top, var(--bg-card) 0%, transparent 100%);
@@ -953,11 +956,14 @@ nav {
 
 .work-links {
   display: flex;
+  margin-top: auto;
 }
 
 .work-links .btn {
   width: 100%;
   justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
 }
 
 .work-links a {
@@ -1461,6 +1467,48 @@ footer p {
   
   .hero .btn-group {
     flex-direction: column;
+  }
+
+  /* Mobile menu resume button styling */
+  .mobile-resume-wrapper {
+    margin-top: 2.5rem;
+    display: block;
+  }
+
+  .mobile-resume-wrapper .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 1.1rem;
+    color: var(--bg-primary);
+  }
+
+  /* Responsive project cards */
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .work-item {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .work-item-image {
+    height: 180px;
+  }
+
+  .work-item-content {
+    padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+  }
+
+  /* Prevent overlapping with Back to Top button */
+  .work-links .btn {
+    width: fit-content;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
 
